@@ -23,14 +23,13 @@ public abstract class BaseTest {
 
     @BeforeEach
     public void setUp() {
-        driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
+        FrameworkUtils.initDriver();
         driver.navigate().to(JsonDataProvider.testData.baseUrl);
     }
 
     @AfterEach
     public void tearDown() {
-
+        //FrameworkUtils.closeDriver();
     }
 
     @AfterAll
