@@ -31,6 +31,9 @@ public class DepositSettingsForm extends BaseForm {
     @FindBy(xpath = "//*[@data-placement = 'bottom']")
     WebElement anyOpenedList;
 
+    @FindBy(xpath = "//*[contains(@class,'ModalBody')]//button")
+    WebElement showBanksButton;
+
     @FindBy(xpath = "//*[contains(@class,'SearchModal')]//*[@data-placement]//li//*[text()]")
     List<WebElement> dropdownElements;
 
@@ -100,6 +103,10 @@ public class DepositSettingsForm extends BaseForm {
         } catch (TimeoutException e) {
             Assertions.fail("В списке опций отсутствует элемент " + optionName);
         }
+    }
+
+    public void clickShowButton() {
+        showBanksButton.click();
     }
 
     private boolean isBankSelected(String bankName) {

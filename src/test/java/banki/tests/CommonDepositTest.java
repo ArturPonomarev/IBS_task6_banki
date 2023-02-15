@@ -36,5 +36,6 @@ public class CommonDepositTest extends BaseTest{
         depositSetting.selectAdvanceOption("Со снятием");//TODO: test data
         depositSetting.selectAdvanceOption("С пополнением");//TODO: test data
         depositSetting.selectAdvanceOption("С капитализацией");//TODO: test data
+        depositSetting.clickShowButton();
     }
 }

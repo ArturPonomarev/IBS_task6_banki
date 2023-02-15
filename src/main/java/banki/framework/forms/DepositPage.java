@@ -18,4 +18,8 @@ public class DepositPage extends BaseForm{
     public void openDepositSettings() {
         depositSettingsButton.click();
     }
+
+    public int getDepositCount() {
+
+    }
 }
