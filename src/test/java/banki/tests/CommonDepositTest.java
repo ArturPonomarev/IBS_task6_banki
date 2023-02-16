@@ -37,5 +37,12 @@ public class CommonDepositTest extends BaseTest{
         depositSetting.selectAdvanceOption("С пополнением");//TODO: test data
         depositSetting.selectAdvanceOption("С капитализацией");//TODO: test data
         depositSetting.clickShowButton();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Assertions.assertEquals(14,depositPage.getFoundedDepositCount(),"Количество найденных вкладов не соответствует ожидаемому");//TODO: test data
+        depositPage.openAdditionalDeposit("Тинькофф Банк"); //TODO: test data
     }
 }
